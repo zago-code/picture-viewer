@@ -1,5 +1,21 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+* {
   margin: 0;
-  background-color: salmon;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  body {
+    width: 118vw;
+  }
 }

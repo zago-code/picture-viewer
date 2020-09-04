@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.nav-logo__container {
+  padding: 20px;
+}
+
+.nav-favorites__container {
+  text-shadow: rgba(0,0,0,.4) 0px -1px 0px, rgba(255,255,255,.3) 0px 1px 0px;
+}
+
+.nav-favorites__container a {
+  text-decoration: none;
+  color: #2b0548;
+}
+
+.nav-logo__container img {
+  width: 100px;
+}
