@@ -5,6 +5,7 @@ import '../assets/style/containers/HomePages.css';
 
 const HomePages = () => {
   const [images, setImages] = useState({ favorites: [], animals: [] });
+  const [count, setCount] = useState(0);
   useEffect(() => {
     fetch('http://localhost:3000/initialState')
       .then((response) => response.json())
@@ -12,8 +13,14 @@ const HomePages = () => {
       .catch((error) => console.error(error));
   }, []);
   const getSourceForIndex = (index) => ({ ...images.animals[index] });
-  console.log(getSourceForIndex(1));
-  const { source, title } = getSourceForIndex(7);
+  const handleClickNext = (event) => {
+    if (count === 19) setCount(0);
+    else setCount(count + 1);
+  };
+  const handleClickSave = (event) => {
+    console.log('Button save was clicked');
+  };
+  const { source, title } = getSourceForIndex(count);
   return (
     <>
       <Header />
@@ -26,10 +33,12 @@ const HomePages = () => {
         </figure>
         <div className='button__container'>
           <Button
+            clickSave={handleClickSave}
             textClass='button guardar'
             name='Save'
           />
           <Button
+            clickNext={handleClickNext}
             textClass='button next'
             name='Next'
           />
