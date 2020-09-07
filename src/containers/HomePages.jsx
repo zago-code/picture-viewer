@@ -4,22 +4,26 @@ import Button from '../components/Button';
 import '../assets/style/containers/HomePages.css';
 
 const HomePages = () => {
-  const [image, setImages] = useState([]);
+  const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3000/animals')
+    fetch('http://localhost:3000/initialState')
       .then((response) => response.json())
       .then((data) => setImages(data))
       .catch((error) => console.error(error));
   }, []);
-  const { source, id } = { ...image[10] };
-  console.log(id);
+  // const { id } = images.animals[0].id;
+  // const getSource = () => {
+  //   const animal = images.animals.length;
+  //   return animal;
+  // };
+  console.log(images.animals);
   return (
     <>
       <Header />
       <section className='viewer__container'>
         <figure className='viewer__image'>
           <img
-            src={source}
+            src='/'
             alt='foto-animal'
           />
         </figure>
