@@ -25,7 +25,7 @@ const HomePages = (props) => {
     props.setFavorite(getSourceForIndex(count));
   };
   // console.log('animals: ', animals);
-  console.log('favorites: ', favorites);
+  // console.log('favorites: ', favorites);
   return (
     <>
       <section className='viewer__container'>

@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         favorites: [...state.favorites, action.payload],
       };
+    case 'DELETE_FAVORITE':
+      return {
+        ...state,
+        myList: state.myList.filter((items) => items.id !== action.payload),
+      };
     default: return state;
   }
 };
