@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Button from '../components/Button';
-import '../assets/style/containers/HomePages.css';
+import '../assets/style/containers/HomePage.css';
 
 const HomePages = () => {
   const [images, setImages] = useState({ favorites: [], animals: [] });
