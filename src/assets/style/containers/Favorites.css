@@ -1,7 +1,7 @@
 .favorites__container {
   position: relative;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   background-image: url('https://cdn.pixabay.com/photo/2016/11/12/11/51/forest-1818690_960_720.jpg');
   background-size: cover;
 }

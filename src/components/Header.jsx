@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/static/logo-pic-viewer.png';
 import '../assets/style/components/Header.css';
 
@@ -6,12 +7,12 @@ const Header = () => {
   return (
     <nav>
       <div className='nav-logo__container'>
-        <a href='index.html'>
+        <Link to='/'>
           <img src={logo} alt='Logo del viewer' />
-        </a>
+        </Link>
       </div>
-      <div className='nav-favorites__container'>
-        <a href='./favorites.html'>Favoritos</a>
+      <div className='ntoavorFtes__conr'>
+        <Link to='./Favorites'>Favoritos</Link>
       </div>
     </nav>
   );

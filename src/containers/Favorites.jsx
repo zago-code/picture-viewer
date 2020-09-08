@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
 import '../assets/style/containers/Favorites.css';
 
 const Favorites = () => {
   return (
     <>
-      <Header />
       <section className='favorites__container'>
         <div className='favorites__images'>
           <figure className='item__image'>

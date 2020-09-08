@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
 import Button from '../components/Button';
 import '../assets/style/containers/HomePage.css';
 
@@ -23,7 +22,6 @@ const HomePages = () => {
   const { source, title } = getSourceForIndex(count);
   return (
     <>
-      <Header />
       <section className='viewer__container'>
         <figure className='viewer__image'>
           <img
