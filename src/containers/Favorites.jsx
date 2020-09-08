@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../assets/style/containers/Favorites.css';
 
-const Favorites = () => {
+const Favorites = (props) => {
+  const { favorites } = props;
+  console.log(favorites);
   return (
     <>
       <section className='favorites__container'>
@@ -52,4 +55,10 @@ const Favorites = () => {
   );
 };
 
-export default Favorites;
+const mapStateToProps = (state) => {
+  return {
+    favorites: state.favorites,
+  };
+};
+
+export default connect(mapStateToProps, null)(Favorites);
