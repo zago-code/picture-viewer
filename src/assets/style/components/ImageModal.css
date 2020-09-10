@@ -1,0 +1,5 @@
+.ImageModal img{
+  width: 560px;
+  height: 400px;
+  object-fit: cover;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../assets/style/components/Figures.css';
 
 const Figures = ({ children }) => {
   return (

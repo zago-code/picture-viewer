@@ -1,0 +1,14 @@
+.item__image {
+  place-self: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.item__image img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.image__button {
+  cursor: pointer;
+}

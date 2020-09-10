@@ -5,9 +5,9 @@ import Button from '../components/Button';
 import '../assets/style/containers/HomePage.css';
 
 const HomePages = (props) => {
-  const { animals, favorites } = props;
-  // const [images, setImages] = useState({ favorites: [], animals: [] });
+  const { animals } = props;
   const [count, setCount] = useState(0);
+  // const [images, setImages] = useState({ favorites: [], animals: [] });
   // useEffect(() => {
   //   fetch('http://localhost:3000/initialState')
   //     .then((response) => response.json())
@@ -15,17 +15,15 @@ const HomePages = (props) => {
   //     .catch((error) => console.error(error));
   // }, []);
   const getSourceForIndex = (index) => ({ ...animals[index] });
-  const handleClickNext = (event) => {
+  const handleClickNext = () => {
     if (count === 19) setCount(0);
     else setCount(count + 1);
   };
   const { source, title } = getSourceForIndex(count);
-  const handleClickSave = (event) => {
+  const handleClickSave = () => {
     console.log('Button save was clicked');
     props.setFavorite(getSourceForIndex(count));
   };
-  // console.log('animals: ', animals);
-  // console.log('favorites: ', favorites);
   return (
     <>
       <section className='viewer__container'>
